@@ -1,0 +1,19 @@
+$bgColor: #343a40;
+$cardColor: #495057;
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: $bgColor;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    h2{
+        color: white;
+        background-color: $cardColor;
+        padding: 20px;
+        border-radius: 10px;
+    }
+}

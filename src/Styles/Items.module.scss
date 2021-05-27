@@ -1,0 +1,92 @@
+@import './constants.scss';
+
+$itemColor: #212529;
+$itemHighlightColor: #495057;
+.container {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 200px);
+	justify-content: space-between;
+
+	.item {
+		width: 200px;
+		margin: 5px 0;
+		border-radius: 5px;
+		overflow: hidden;
+		background-color: $itemColor;
+		padding: 10px;
+		box-sizing: border-box;
+		position: relative;
+		.cover {
+			width: 100%;
+			height: 180px;
+			background-color: $SecondaryColor;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			img {
+				width: 100%;
+				height: auto;
+				margin: 0;
+				padding: 0;
+			}
+		}
+		p {
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			color: white;
+			font-size: 14px;
+		}
+		.info{
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			top: 180px;
+			right: 10px;
+			padding: 5px;
+			cursor: pointer;
+			margin: 3px;
+			border-radius: 50%;
+			background-color: salmon;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			visibility: hidden;
+			transition: visibility 0.1s, transform 0.1s;
+		}
+	}
+	.item:hover{
+		background-color: $itemHighlightColor;
+		.info{
+			visibility: visible;
+			transform: translateY(-10px);
+		}
+	}
+	
+}
+
+.container::after {
+	content: "";
+	flex: auto;
+}
+
+
+.infoContainer{
+	width: auto;
+	height: auto;
+	position: relative;
+	.coverimg{
+		width: 220px;
+		height: 220px;
+		margin: 0 auto;
+		img{
+			width: 100%;
+			height: 100%;
+			// transform: translateY(-50%);
+		}
+
+	}
+}

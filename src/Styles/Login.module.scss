@@ -1,0 +1,84 @@
+$bgColor: #343a40;
+$cardColor: #495057;
+$spotifyBtnColor: #00d159;
+$githubBtnColor: #212529;
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: $bgColor;
+
+    .loginCard{
+        @media screen and (max-width: 700px){
+            width: 90%;
+        }
+        @media screen and (min-width: 701px) and (max-width: 1300px){
+            width: 50%;   
+        }
+        @media screen and (min-width: 1301px) {
+            width: 30%;
+        }
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $cardColor;
+        border-radius: 10px;
+        color: white;
+        padding: 50px;
+        box-sizing: border-box;
+        
+        h2{
+            text-align: center;
+            margin: 0;
+        }
+
+        button, a{
+            display: flex;
+            width: 80%;
+            margin: 12px auto;
+            padding: 16px;
+            box-sizing: border-box;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            justify-content: center;
+            color: white;
+            svg{
+                margin-right: 10px;
+                font-size: 20px;
+            }
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+
+        .githubBtn{
+            background-color: $githubBtnColor;
+        }
+
+        .spotifyBtn{
+            background-color: $spotifyBtnColor;
+        }
+
+        p{
+            text-align: center;
+        }
+
+    }
+    .credits{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        color: white;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 480px) {
+    .loginCard{
+        width: 90%;
+    }
+}
